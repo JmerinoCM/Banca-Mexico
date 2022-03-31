@@ -6,8 +6,9 @@
 
 ## Instrucciones para correr la aplicación web
 
-1. Abrir el archivo ui.R
-2. Seleccionar la opción " Run App "
-3. Interactuar con la app
+1. Abrir la carpeta Rshiny
+2. Abrir el archivo ui.R
+3. Seleccionar la opción " Run App "
+4. Interactuar con la app
 
 
