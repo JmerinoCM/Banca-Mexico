@@ -7,13 +7,13 @@ server <- function(input, output, session) {
       hc_theme(colors = c("#9474c1", "#46bd4f", "#d94424", "#dddfe7", "#55a2b6", 
                           "#c71647", "#5e8ea4", "#955cab", "#55a2b6", "#ac3c64",
                           "#2b44a6", "#c23d64", "#28a690", "#5c526f", "#e0ca77",
-                          "#ee974a", "#386fce", "#265352", "#d43d29", "#4c545b"), ### Importante para modificar todos los colores
+                          "#ee974a", "#386fce", "#265352", "#d43d29", "#4c545b"), 
                chart = list(
-                 backgroundColor = 'transparent', #'rgba(255, 255, 166,0.1)'   'transparent'
+                 backgroundColor = 'transparent',
                  style = list(
                    fontFamily = "Inconsolata",
                    font = '15pt "Inconsolata", Verdana, sans-serif',
-                   color = "#3e5f8a" #  "#negro101010" #blancoFFFFFF #dorado?efb810 #dorado?efb810  "#azulbrillante$3e5f8a"
+                   color = "#3e5f8a" 
                  )
                ),
                title = list(
@@ -79,7 +79,7 @@ server <- function(input, output, session) {
                  align = "left"
                ),
                tooltip = list(
-                 backgroundColor = 'rgba(0,0,0,.7)', ### you must be 'transparent'
+                 backgroundColor = 'rgba(0,0,0,.7)', 
                  style = list(
                    color = "#efb810",
                    fontSize = "15px"
@@ -99,7 +99,7 @@ server <- function(input, output, session) {
     theme
   }
   
-  ###################Clusters##############
+  #Clusters#
   output$clusters_py<-renderHighchart({
     
     hc <- df_two %>% 
@@ -286,8 +286,6 @@ server <- function(input, output, session) {
   
   
   source(file.path("101_con_cre.R"),  local = TRUE)$value
-  
-  
   
   
 } 

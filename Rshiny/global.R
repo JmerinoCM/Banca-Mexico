@@ -1,58 +1,23 @@
-# rm(list = ls())
-#######################################
-# library(purrr)
-library(viridisLite)
-library(highcharter)
-library(htmltools)
-library(leaflet)      # libreria para graficar mapas interactivos
-library(sf)           # manejo de informacion geografica 
-library(viridis)      # paletas de colores
-library(leaflet.providers)
-library(bslib)
-library(stringr)
-library(lubridate)
-###########################
-library(tidyverse)
-#library(dashboardthemes)
-library(shinyWidgets)
-library(plotly)
-library(sf)
-library(tmap)
-library(haven)
-library(viridis)
-library(readxl)
-library(RColorBrewer)
-library(ggcorrplot)
-library(htmlwidgets)
-library(magrittr)
-# Code to create ScotPHO's Shiny profile platform
-# In this script include packages, functions, datasets and anyting that will be 
-# used both by UI and server
 
 ############################.
 ##Packages ----
 ############################.
 library(shiny)
-library(shinyBS) #modals
-library(dplyr) # data manipulation
-library(ggplot2) #data visualization
-library (DT) # for data tables
-library(leaflet) #javascript maps
-library(plotly) #interactive graphs
-library(shinyWidgets) # for extra widgets
-library(tibble) # rownames to column in techdoc
-library(shinyBS) #modals
+library(shinyBS) 
+library(ggplot2)
+library(plotly) 
+library(shinyWidgets) 
+library(tibble)
+library(shinyBS) 
 library(shinyjs)
-library(shinydashboard) #for valuebox on techdoc tab
+library(shinydashboard) 
 library(sp)
 
-library(shinycssloaders) #for loading icons, see line below
-# it uses github version devtools::install_github("andrewsali/shinycssloaders")
-# This is to avoid issues with loading symbols behind charts and perhaps with bouncing of app
+library(shinycssloaders) 
 library(rmarkdown)
-library(flextable) #for tech document table
-library(webshot) #to download plotly charts
-library(rintrojs) # for help intros
+library(flextable) 
+library(webshot)
+library(rintrojs) 
 library(V8)
 library("spsComps")
 #######################################################
@@ -68,9 +33,6 @@ library(bs4Dash)
 library(doBy)
 library(dplyr)
 library(lubridate)
-
-# As well as webshot phantomjs is needed l to download Plotly charts
-# https://github.com/rstudio/shinyapps-package-dependencies/pull/180
 
 if (is.null(suppressMessages(webshot:::find_phantom()))) {
   webshot::install_phantomjs()

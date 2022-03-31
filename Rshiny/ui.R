@@ -1,15 +1,9 @@
-#Code to create ScotPHO's Shiny profile platform
-# This script includes the user-interface definition of the app.
 
-
-###############################################.
-## Header ---- 
-###############################################.
-tagList( #needed for shinyjs
-  useShinyjs(),  # Include shinyjs
-  introjsUI(),   # Required to enable introjs scripts
-  ##############################################Pantalla de carga ########
-  useWaiter(), # include dependencies
+tagList( 
+  useShinyjs(),  
+  introjsUI(),   
+  #Pantalla de carga ########
+  useWaiter(), 
   waiterShowOnLoad(c(""), image = "https://i.pinimg.com/originals/0c/bf/2f/0cbf2f5c3fb37d033c0bc791ae196dbb.gif"), #,color = "#101010"),
   use_waiter(),
   
@@ -26,22 +20,15 @@ tagList( #needed for shinyjs
                                                      #secondary ="#c5d66f", #efb810
                                                      base_font = font_google("Prompt"),
                                                      code_font = font_google("JetBrains Mono"),
-  ),  # tema oscuro,bg = "#101010",fg = "#FFFFFF"   tema conejo  bootswatch = "sketchy",bg = "#fffff2",fg = "#101010"                         #needed for landing page ,bg = "#fffee8",fg = "#101010"
-           #title = div(tags$a(img(src="logo CEE azul.png"), href= "https://www.colmex.mx/"),style = "position: relative"), # Navigation bar
-           windowTitle = "Desafío Data México Terdashianos", #title for browser tab
-            #Theme of the app (blue navbar)
-           collapsible = TRUE, #position="fixed-top",  #tab panels collapse into menu in small screens
+  ), 
+          windowTitle = "Desafío Data México Terdashianos", 
+           collapsible = TRUE, 
            header =
      
             tags$head(style = "position: relative", 
             tags$link(rel="shortcut icon", href="ghibli.ico"), 
-             # HTML("<base target='_blank'> ") # to make external links open a new tab
-             ),#br(),br(),br(),br(),br(),
-  
-  # setBackgroundImage(
-  #   src = "https://i.pinimg.com/originals/0c/bf/2f/0cbf2f5c3fb37d033c0bc791ae196dbb.gif",
-  # 
-  # ),
+            ),
+
     setBackgroundColor(
       color = c("#101010","#101010","#101010","#101010","#101010","#101010","#101010",
                 "#101010","#101010","#101010","#101010","#101010","#101010","#101010",
@@ -59,22 +46,13 @@ tagList( #needed for shinyjs
       direction = "bottom"
     ),
   
-  # setBackgroundColor(
-  #   color = c("#d8deba","#d8deba","#d8deba","#d8deba","#c5d586"),
-  #   gradient = c("linear"),
-  #   direction = "bottom"
-  # ),
-  tabPanel( "Presentación", #, href="https://4v1enh-jmzarco.shinyapps.io/TransaccionesBancarias1/"),
-            ###############################################,                  ### 
-            
+  tabPanel( "Presentación",
             h1("Cambios en el uso e infraestructura bancaria y uso de banca movil", align = "center"),
             h2(HTML('<center><img src="dm.png" width="100"></center>')),
             h3("Aplicación web", align = "center"),
             
             br(""),
-            
-            #############################################################################################################################################
-            h1("Equipo: Terdashians", align = "center"),
+         h1("Equipo: Terdashians", align = "center"),
             br(""),
             h3("", align = "center"), 
             br(""),
@@ -95,8 +73,6 @@ tagList( #needed for shinyjs
             br(""),
             h5(strong("Gracias"),align = "center"),
             
-            
-            ###############################################
             chooseSliderSkin(skin= "Big"),
             setShadow(class = "dropdown-menu") ,
             setShadow(class = "highchart"),
